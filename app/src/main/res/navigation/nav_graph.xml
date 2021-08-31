@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupFragment">
+
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.gkonstantakis.chessboard.fragments.SetupFragment"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_chessboardFragment"
+            app:destination="@id/chessboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chessboardFragment"
+        android:name="com.gkonstantakis.chessboard.fragments.ChessboardFragment"
+        android:label="fragment_chessboard"
+        tools:layout="@layout/fragment_chessboard" >
+        <action
+            android:id="@+id/action_chessboardFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+</navigation>
